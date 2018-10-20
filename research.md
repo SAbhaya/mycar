@@ -20,6 +20,8 @@ knock sensors are so-called piezo-electric microphones bolted to the engine bloc
 
 
 <div>
+  
+![](https://upload.wikimedia.org/wikipedia/commons/d/dc/4StrokeEngine_Ortho_3D_Small.gif)
 By Zephyris [<a href="https://creativecommons.org/licenses/by-sa/3.0">CC BY-SA 3.0 </a> or <a href="http://www.gnu.org/copyleft/fdl.html">GFDL</a>], <a href="https://commons.wikimedia.org/wiki/File:4StrokeEngine_Ortho_3D_Small.gif">from Wikimedia Commons</a>
 </div>
 
