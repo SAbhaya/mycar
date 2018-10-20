@@ -19,9 +19,11 @@ https://auto.howstuffworks.com/compression-ratio-octane-ratings1.htm
 knock sensors are so-called piezo-electric microphones bolted to the engine block. "The knock detector talks to the ECU [the car's computer], which retards the timing to stop the knock," https://auto.howstuffworks.com/compression-ratio-octane-ratings2.htm
 
 
-![4 stroke engine](https://en.wikipedia.org/wiki/Stroke_(engine)#/media/File:4StrokeEngine_Ortho_3D_Small.gif)
-
-
+<div>
+<a title="By Zephyris [CC BY-SA 3.0 
+ (https://creativecommons.org/licenses/by-sa/3.0
+) or GFDL (http://www.gnu.org/copyleft/fdl.html)], from Wikimedia Commons" href="https://commons.wikimedia.org/wiki/File:4StrokeEngine_Ortho_3D_Small.gif"><img width="128" alt="4StrokeEngine Ortho 3D Small" src="https://upload.wikimedia.org/wikipedia/commons/d/dc/4StrokeEngine_Ortho_3D_Small.gif"></a>
+</div>
 
 trusty owners' manual and see what you should be doing. If your vehicle requires a high octane rating, the manual will tell you. Otherwise, don't pay the extra 15 to 20 cents per gallon for a higher octane fuel. "Putting high-octane fuel into a car that only needs low-octane fuel is a total waste of money," says Arman.
 
