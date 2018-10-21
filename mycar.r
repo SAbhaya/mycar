@@ -7,6 +7,7 @@ data <- read_csv("data.csv")
 
 
 # select only required columns and convert date, add cost column?? required??
+# changed date from datetime format.
 
 data2 <- data %>% 
   select(refuelDate, quantity,distance,price,fuel_station,fuel_subtype) %>%
