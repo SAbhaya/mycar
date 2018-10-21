@@ -10,7 +10,7 @@ data <- read_csv("data.csv")
 
 data2 <- data %>% 
   select(refuelDate, quantity,distance,price,fuel_station,fuel_subtype) %>%
-  mutate(refuelDate = ymd_hms(refuelDate), cost = quantity*price/100) %>%
+  mutate(refuelDate = date(ymd_hms(refuelDate)), cost = quantity*price/100) %>%
   arrange(refuelDate)
 
 
