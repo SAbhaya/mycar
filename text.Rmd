@@ -1,0 +1,44 @@
+# Data Analysis on My Car fuel
+
+## Introduction
+
+I have gathred most of my refuel data using an app. This analysis is all about fuel consumption and efficieny of differnt fuel  types. 
+
+## Research
+
+An octane rating, or octane number, is a standard measure of the performance of an engine or aviation fuel. 
+
+
+The piston compresses the fuel and air mix in the combustion chamber of the engine.
+Normaly the compressed air and gas mix is ignited by a spark plug. But when that does not happen,  the mixture explodes in the combustion chamber rather than ignited by the spark plug.  This is known as detonatig or knocking and pinging. https://auto.howstuffworks.com/compression-ratio-octane-ratings1.htm
+
+
+So high performance gasoline engines that require higher copression ratios, use high octane fuels. 
+The higher the octane number, the more compression the fuel can withstand before detonating
+https://en.wikipedia.org/wiki/Octane_rating
+
+<div>
+  
+![](https://upload.wikimedia.org/wikipedia/commons/d/dc/4StrokeEngine_Ortho_3D_Small.gif)
+By Zephyris [<a href="https://creativecommons.org/licenses/by-sa/3.0">CC BY-SA 3.0 </a> or <a href="http://www.gnu.org/copyleft/fdl.html">GFDL</a>], <a href="https://commons.wikimedia.org/wiki/File:4StrokeEngine_Ortho_3D_Small.gif">from Wikimedia Commons</a>
+</div>
+
+## Background
+
+I have used four fuel types of this. 
+
+* E10 - regular unleaded petrol blended with between 9% and 10% ethanol.
+* 91 - Standard unleaded petrol
+* 95 - Premium 95 Octane
+* 98 - Premium 98 Octane
+
+Before anaylsing the data, I have made several assumptions.
+
+* Only consider fuel type as varaible and consider other factors remain constant (driving style, weather, type pressure etc.)
+* Fuel refil amount = fuel usage for distance travelled after previous fuel refil.
+
+
+## Data
+
+I have removed fuel station names and time stamp from my date set. After cleaning up some header text, the .csv file can be used for analysis.
+
