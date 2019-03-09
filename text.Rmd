@@ -1,3 +1,13 @@
+
+---
+title: "My Car Fuel"
+output:
+  html_document
+---
+
+
+
+
 # Data Analysis on My Car fuel
 
 ## Introduction
@@ -40,5 +50,46 @@ Before anaylsing the data, I have made several assumptions.
 
 ## Data
 
-I have removed fuel station names and time stamp from my date set. After cleaning up some header text, the .csv file can be used for analysis.
+In order to use for analysis, some header text from the date set have been removed. Also fuel stations names have been replaced with dummy names.
+
+Now we can import the data into R for analysis.
+
+## Code
+
+Load the required packages
+
+```{r pkg, warning = FALSE, message=FALSE}
+
+library(readr)
+library(dplyr)
+library(lubridate)
+library(ggplot2)
+
+```
+
+Import csv file to R
+
+```{r import, warning=FALSE, message=FALSE}
+data <- read_csv("data.csv")
+```
+
+
+select only required columns
+
+changed date to datetime format
+
+add new column for calculated cost.
+
+```{r clean, warning = FALSE, message=FALSE}
+
+data2 <- data %>% 
+  select(refuelDate, quantity,distance,price,fuel_station,fuel_subtype) %>%
+  mutate(refuelDate = date(ymd_hms(refuelDate)), cost = quantity*price/100) %>%
+  arrange(refuelDate)
+
+```
+
+
+
+
 
