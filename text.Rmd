@@ -73,6 +73,14 @@ Import csv file to R
 data <- read_csv("data.csv")
 ```
 
+Check the data using `glimpse()` function in `dplyr` package.
+
+```{r check}
+
+glimpse(data)
+
+```
+
 
 select only required columns
 
@@ -86,6 +94,8 @@ data2 <- data %>%
   select(refuelDate, quantity,distance,price,fuel_station,fuel_subtype) %>%
   mutate(refuelDate = date(ymd_hms(refuelDate)), cost = quantity*price/100) %>%
   arrange(refuelDate)
+
+glimpse(data2)
 
 ```
 
