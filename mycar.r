@@ -2,6 +2,7 @@ library(readr)
 library(dplyr)
 library(lubridate)
 library(ggplot2)
+library(plotly)
 
 data <- read_csv("data.csv")
 
@@ -39,6 +40,14 @@ data2 %>%
   group_by(fuel_station) %>%
   count() %>%
   arrange(desc(n))
+
+#plot
+
+p <- data2 %>%
+  group_by(fuel_station) %>%
+  count() %>%
+  ggplot(aes(x= reorder(fuel_station, -n), y=n)) + geom_bar(stat = "identity") %>%
+  ggplotly(p)
 
 top_stations <- data2 %>% 
   count(fuel_station) %>%

@@ -64,6 +64,7 @@ library(readr)
 library(dplyr)
 library(lubridate)
 library(ggplot2)
+library(plotly)
 
 ```
 
@@ -81,12 +82,13 @@ glimpse(data)
 
 ```
 
+Now, lets clean our imported data.
 
-select only required columns
+1. Select only required columns
 
-changed date to datetime format
+2. changed date to datetime format
 
-add new column for calculated cost.
+3. add new column for calculated cost.
 
 ```{r clean, warning = FALSE, message=FALSE}
 
@@ -95,11 +97,46 @@ data2 <- data %>%
   mutate(refuelDate = date(ymd_hms(refuelDate)), cost = quantity*price/100) %>%
   arrange(refuelDate)
 
+```
+
+Check the dataframe again...
+
+```{r check_d2}
+
 glimpse(data2)
 
 ```
 
+Lets check the missing values in each column
 
 
+```{r sum_missing}
+
+apply(is.na(data2),2,sum)
+
+```
+
+So there are `r sum(is.na(data2$fuel_station))` of missing fuel station names & `r sum(is.na(data2$fuel_subtype))` of missing fuel_subtype data.
+
+Add dummy fuel station to missing values, fuel station name is not very sensitive and can use for remaining data in the record for calculations.
+
+```{r add_noname}
+
+data2$fuel_station[is.na(data2$fuel_station)] <- "noname"
+
+```
+
+We can keep fuel_subtype missing data.
+
+Lets plot the number of re-fuels per fuel station and reorder
+
+```{r plot-refuel}
+
+data2 %>%
+  group_by(fuel_station) %>%
+  count() %>%
+  ggplot(aes(x= reorder(fuel_station, -n), y=n)) + geom_bar(stat = "identity")
+
+```
 
 
