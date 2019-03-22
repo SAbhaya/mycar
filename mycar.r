@@ -46,8 +46,10 @@ data2 %>%
 p <- data2 %>%
   group_by(fuel_station) %>%
   count() %>%
-  ggplot(aes(x= reorder(fuel_station, -n), y=n)) + geom_bar(stat = "identity") %>%
-  ggplotly(p)
+  ggplot(aes(x= reorder(fuel_station, -n), y=n)) + geom_bar(stat = "identity") +
+  theme(axis.text.x = element_text(angle = 90, hjust = 1))
+
+
 
 top_stations <- data2 %>% 
   count(fuel_station) %>%
@@ -59,6 +61,9 @@ top_stations <- data2 %>%
 data2 %>% 
   filter(fuel_station %in% top_stations) %>%
   ggplot(aes(x=fuel_station, y=price)) + geom_boxplot() + theme(axis.text.x=element_text(angle=90, hjust=1)) + facet_grid(~fuel_subtype)
+
+ggplot(data2, aes(x=fuel_subtype, y=price, fill = fuel_subtype)) + geom_boxplot(alpha = 0.5) + theme(axis.text.x=element_text(angle=90, hjust=1))
+
 
 ggplot(data2, aes(x=cost)) + geom_density() 
 ggplot(data2, aes(x= price, fill = fuel_subtype)) + geom_density(alpha = 0.3) + facet_grid(~fuel_subtype)
